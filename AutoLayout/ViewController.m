@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
     //[self test];
     
@@ -29,7 +30,22 @@
     
     //[self test2];
     
-    [self test3];
+    //[self test3];
+    
+    [self test4];
+}
+
+- (void)test4 {
+    
+    UIImageView *imageView = [UIImageView new];
+    [self.view addSubview:imageView];
+    imageView.image = [UIImage imageNamed:@"marry_like"];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view.mas_centerX).offset(-5);
+        make.top.equalTo(self.view).offset(100);
+        //make.width.height.mas_equalTo(160);
+    }];
+    
 }
 
 - (void)test {
